@@ -4,11 +4,12 @@
 How to avoid trouble (not best practice)
 
 ### 1.1. How to init project
-Create empty gradle project.
+`gradle init`
 
 ### 1.2. How to add module
 Add module in any format you'd like.
-- each module must contain `build.gradle`.
+- [spring initializr](https://start.spring.io/)
+- or `gradle init`
 
 Keep the same folder structure in all modules:
 - `src/main/java/org/example/MODULE_NAME/.../Foo.java`
@@ -19,7 +20,7 @@ Edit `build.gradle`:
 dependencies {
     // ...
     
-    // When target module is 'lib'
+    // When imported module is 'lib'
     implementation project(':lib')
 }
 ```
@@ -73,4 +74,3 @@ Select toolchain
 ```
 $ export JAVA_HOME=/home/msisdev/.jdks/temurin-21.0.6 
 ```
-
